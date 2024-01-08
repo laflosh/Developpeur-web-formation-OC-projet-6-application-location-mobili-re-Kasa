@@ -25,7 +25,13 @@ time, mark, audio, video {
 body {
 	max-width: 1440px;
 	margin: auto;
-	line-height: 1;
+}
+
+#root{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 }
 
 ol, ul {

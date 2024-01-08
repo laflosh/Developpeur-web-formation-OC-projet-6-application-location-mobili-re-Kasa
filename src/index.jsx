@@ -7,7 +7,7 @@ import Housing from "./_pages/Housing";
 import Error from "./_pages/Error"
 import Header from "./_components/Header";
 import Footer from "./_components/Footer"
-import "./styles/reset.scss";
+import "./styles/global.scss";
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

@@ -5,9 +5,10 @@ import "../../styles/components/Header.scss"
 function Header(){
 
     return(
+
         <header className="header">
 
-            <img className="logo" src={logo} title="Logo" alt="Logo de Kasa"/>
+            <img className="header__logo" src={logo} title="Logo" alt="Logo de Kasa"/>
 
             <nav className="navbar">
 
@@ -17,6 +18,7 @@ function Header(){
             </nav>
 
         </header>
+
     )
 
 }

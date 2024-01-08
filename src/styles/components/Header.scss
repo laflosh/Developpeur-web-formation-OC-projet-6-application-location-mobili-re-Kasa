@@ -1,4 +1,4 @@
-@import "../reset.scss";
+@import "../global.scss";
 
 .header{
     width: 1240px;
@@ -9,7 +9,7 @@
     align-items: center;
     margin-top: 30px;
     padding: 10px;
-    .logo{
+    &__logo{
         width: 210px;
         height: 68px;
     }
