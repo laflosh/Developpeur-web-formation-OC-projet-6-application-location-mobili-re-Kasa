@@ -1,8 +1,10 @@
-import logements from "../../data/logements.json";
+import { dataGalery } from "../../data/dataTools";
 import CardGalery from "../CardGalery";
 import "../../styles/components/Galery.scss";
 
 function Galery(){
+
+    let datas = dataGalery();
 
     return(
 
@@ -11,13 +13,13 @@ function Galery(){
             <ul className="galery">
 
                 
-                {logements.map( (logement) =>
+                {datas.map( (data) =>
 
-                    <li key={logement.id}>
+                    <li key={data.id}>
 
                         <CardGalery
-                        title={logement.title}
-                        cover={logement.cover}
+                        title={data.title}
+                        cover={data.cover}
                         />
 
                     </li>
