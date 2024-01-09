@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "../../styles/components/Collapse.scss";
 
-function Collapse(){
+function Collapse({title, content}){
 
     let [isOpen, setIsOpen] = useState(false);
 
@@ -15,7 +15,7 @@ function Collapse(){
 
             <div className="collapseBar">
 
-                <h2 className="collapseBar__title">Titre</h2>
+                <h2 className="collapseBar__title">{title}</h2>
 
                 <button onClick={handleClick} 
                 className={isOpen ? "collapseBar__button collapseBar__button--over" 
@@ -33,14 +33,7 @@ function Collapse(){
                 <div className="contentWrapper">
 
                     <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
-                        sed do eiusmod tempor incididunt ut labore et dolore 
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud 
-                        exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate 
-                        velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint 
-                        occaecat cupidatat non proident, sunt in culpa qui officia deserunt 
-                        mollit anim id est laborum
+                        {content}
                     </p>
 
                 </div>

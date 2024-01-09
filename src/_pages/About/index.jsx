@@ -1,5 +1,6 @@
 import backgroundPic from "../../assets/background_img_about.png";
 import Collapse from "../../_components/Collapse";
+import dataAbout from "../../data/contentAbout.json";
 import "../../styles/pages/About.scss";
 
 function About(){
@@ -16,7 +17,18 @@ function About(){
 
             <section className="about">
 
-                <Collapse/>
+                <ul>
+
+                    {dataAbout.map((data) =>
+                        <li key={data.id}>
+                            <Collapse
+                            title={data.title}
+                            content={data.content}
+                            />
+                        </li>
+                    )}
+
+                </ul>
 
             </section>
 
