@@ -1,68 +1,55 @@
 @import "../global.scss";
 
-@mixin collapse{
-    width: 1023px;
-    height: 52px;
-    background-color: $cd-primary;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px 10px 15px;
-    margin-top: 40px;
-    border-radius: 5px;
-}
-
-@mixin title_collapse{
-    color: white;
-    font-weight: 500;
-    font-size: 24px;
-}
-
-@mixin button_collapse{
-    width: 32px;
-    height: 32px;
-    font-size: 30px;
-    color: white;
-    border-style: none;
-    background: none;
-    cursor: pointer;
-}
-
-.collapseClose{
-    @include collapse;
-    &__title{
-        @include title_collapse;
-    }
-    &__button{
-        @include button_collapse;
-        transform: rotate(0deg);
-        transition: transform 3s linear;
-        
-    }
-}
-
 .collapse{
     display: flex;
     flex-direction: column;
     justify-content: center;
     .collapseBar{
-        @include collapse;
+        width: 1023px;
+        height: 52px;
+        background-color: $cd-primary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px 10px 15px;
+        margin-top: 40px;
+        border-radius: 5px;
         &__title{
-            @include title_collapse;
+            color: white;
+            font-weight: 500;
+            font-size: 24px;
         }
         &__button{
-            @include button_collapse;
-            transform: rotate(180deg);
-            transition: transform 3s linear;
+            width: 32px;
+            height: 32px;
+            font-size: 30px;
+            color: white;
+            border-style: none;
+            background: none;
+            cursor: pointer;
+            transform: rotate(0deg);
+            transition: transform 350ms linear;
+            &--over{
+            transform: rotate(-180deg);
+            }
         }
     }
-    &__content{
-        width: 1023px;
+    .contentWrapper{
         font-weight: 400;
         font-size: 18px;
+        text-align: start;
         background-color: #F6F6F6;
         border-radius: 10px 10px 5px 5px;
         padding: 17.5px;
+    }
+    &__content{
+        width: 1058px;
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 500ms ease-in-out;
+        &--over{
+            max-height: 500px;
+        }
     }
     
 }

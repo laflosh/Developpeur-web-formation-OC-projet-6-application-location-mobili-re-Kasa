@@ -11,7 +11,7 @@ function Home(){
             <section className="banner">
 
                 <img className="banner__image" src={backgroundPic} title="Photo" alt="Un paysage en bord de plage"/>
-                <p className="banner__content">Chez vous, partout et ailleurs</p>
+                <h1 className="banner__content">Chez vous, partout et ailleurs</h1>
 
             </section>
 
