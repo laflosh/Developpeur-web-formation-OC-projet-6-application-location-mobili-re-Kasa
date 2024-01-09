@@ -11,13 +11,13 @@ function Galery(){
             <ul className="galery">
 
                 
-                {logements.map((logements) =>
+                {logements.map( (logement) =>
 
-                    <li key={logements.id}>
+                    <li key={logement.id}>
 
                         <CardGalery
-                        title={logements.title}
-                        cover={logements.cover}
+                        title={logement.title}
+                        cover={logement.cover}
                         />
 
                     </li>
