@@ -1,8 +1,12 @@
 
 
-function Housing(){
+function Housing(data){
 
+    return(
 
+        <p>{data.title}</p>
+        
+    )
 
 }
 

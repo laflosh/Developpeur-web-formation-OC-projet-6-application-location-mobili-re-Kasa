@@ -12,6 +12,11 @@ export function dataGalery(){
 
 export function dataById(id){
 
+    let data = [];
+    data = logements.filter((logement) =>{
+        return logement.id === id
+    })
 
+    return data;
 
-}
+};
