@@ -12,8 +12,8 @@ export function dataGalery(){
 
 export function dataById(id){
 
-    let data = [];
-    data = logements.filter((logement) =>{
+    let data = {};
+    data = logements.find((logement) =>{
         return logement.id === id
     })
 

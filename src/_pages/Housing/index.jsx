@@ -1,10 +1,13 @@
+import { useLocation } from "react-router-dom";
 
+function Housing(){
 
-function Housing(data){
+    let { state } = useLocation();
+    console.log(state);
 
     return(
 
-        <p>{data.title}</p>
+        <p>{state.title}</p>
         
     )
 
