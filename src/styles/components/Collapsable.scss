@@ -1,0 +1,64 @@
+@import "../global.scss";
+
+.collapsable{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    .title{
+        background-color: $cd-primary;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1em 1em;
+        margin-top: 2em;
+        border-radius: 0.3em;
+        cursor: pointer;
+
+        h2{
+            color: #FFFFFF;
+            font-weight: 500;
+            font-size: 1.6em;
+        }
+
+        .icon{
+            color: #FFFFFF;
+            width: 2em;
+            height: 2em;
+            transform: rotate(0deg);
+            transition: transform 250ms linear;
+
+            &-over{
+                transform: rotate(-180deg);
+            }
+        }
+    }
+
+    .content {
+        text-align: start;
+
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 2s ease-out;
+
+        &-over{
+            max-height: 100%;
+
+            div {
+                top:0px !important;
+            }
+        }
+
+        div {
+            background-color: #F6F6F6;
+            border-radius: 0px 0px 0.3em 0.3em;
+            padding: 17.5px;
+            font-weight: 400;
+            font-size: 1.1em;
+            position: relative;
+            top: -100px;
+            transition: top 750ms ease;
+        }
+    }
+    
+}
