@@ -1,7 +1,6 @@
 import backgroundPic from "../../assets/background_img_about.png";
 import Collapsable from "../../_components/Collapsable";
 import dataAbout from "../../data/_contentAbout.json";
-import "../../styles/pages/About.scss";
 
 function About(){
 

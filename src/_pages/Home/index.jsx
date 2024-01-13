@@ -1,8 +1,9 @@
 import backgroundPic from "../../assets/background_img_home.png"
 import Galery from "../../_components/Galery";
-import "../../styles/pages/Home.scss";
 
 function Home(){
+
+
 
     return(
 

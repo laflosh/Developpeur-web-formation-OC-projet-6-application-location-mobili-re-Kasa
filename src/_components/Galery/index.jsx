@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useNavigate } from 'react-router-dom'
 import { dataGalery,dataById } from "../../data/dataTools";
 import CardGalery from "../CardGalery";
-import "../../styles/components/Galery.scss";
 
 function Galery(){
 

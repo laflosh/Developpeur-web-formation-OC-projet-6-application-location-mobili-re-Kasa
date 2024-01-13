@@ -1,4 +1,3 @@
-import "../../styles/components/CardGalery.scss"
 
 function CardGalery({title, cover}){
 

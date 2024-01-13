@@ -1,12 +1,11 @@
 import {Link} from "react-router-dom";
 import logoError from "../../assets/404.svg";
-import "../../styles/pages/Error.scss";
 
 function Error(){
 
     return(
 
-        <div className="error">
+        <section className="error">
 
             <img className="error__logo" src={logoError} alt="logo d'erreur"/>
 
@@ -14,7 +13,7 @@ function Error(){
 
             <Link className="error__link" to="/">Retourner sur la page d'accueil</Link>
 
-        </div>
+        </section>
 
     )
 
