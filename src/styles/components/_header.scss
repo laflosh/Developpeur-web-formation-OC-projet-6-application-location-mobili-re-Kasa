@@ -23,9 +23,7 @@
             text-decoration: none;
             text-align: right;
             border-bottom: 2px solid white;
-            &:hover{
-                border-bottom: 2px solid $cd-primary;
-            }
+            padding: 5px;
         }
     }
 }

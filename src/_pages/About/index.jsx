@@ -16,18 +16,15 @@ function About(){
 
             <section className="about">
 
-                <ul>
-
-                    {dataAbout.map((data) =>
-                        <li key={data.id}>
-                            <Collapsable
-                            title={data.title}
-                            content={data.content}
-                            />
-                        </li>
-                    )}
-
-                </ul>
+                {dataAbout.map((data) =>
+                    <div key={data.id}>
+                    <Collapsable
+                    title={data.title}
+                    content={data.content}
+                    />
+                    </div>
+                        
+                )}
 
             </section>
 

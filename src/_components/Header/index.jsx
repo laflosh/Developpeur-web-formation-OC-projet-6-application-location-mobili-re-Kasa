@@ -1,7 +1,14 @@
-import { Link } from "react-router-dom";
+import { NavLink, } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 
 function Header(){
+
+    let activeLinkStyle = ({isActive}) => {
+
+        return {
+            "border-bottom": isActive && "2px solid #FF6060",
+        };
+    };
 
     return(
 
@@ -11,8 +18,20 @@ function Header(){
 
             <nav className="navbar">
 
-                <Link className="navbar__link" to="/">Accueil</Link>
-                <Link className="navbar__link" to="/about">A propos</Link>
+                <NavLink 
+                className="navbar__link" 
+                to="/"
+                style={activeLinkStyle}
+                >
+                    Accueil
+                </NavLink>
+                <NavLink 
+                className="navbar__link" 
+                to="/about"
+                style={activeLinkStyle}
+                >
+                    A propos
+                </NavLink>
 
             </nav>
 

@@ -10,8 +10,6 @@ function Galery(){
 
     let datas = dataGalery();
 
-    //let dataHousingPage = dataById(idValue);
-
     function handleClick(id){
 
         setIdValue(idValue = id);
