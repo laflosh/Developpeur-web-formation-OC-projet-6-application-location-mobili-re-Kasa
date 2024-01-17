@@ -7,7 +7,7 @@ function Home(){
 
     return(
 
-        <>
+        <div className="home">
 
             <section className="banner">
 
@@ -18,7 +18,7 @@ function Home(){
 
             <Galery/>
 
-        </>
+        </div>
 
     )
 

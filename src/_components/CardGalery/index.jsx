@@ -6,7 +6,9 @@ function CardGalery({title, cover}){
         <div className="card">
 
             <img className="card__image" src={cover} title="Photo" alt={title}/>
-            <span className="card__title">{title}</span>
+            <div className="card__layer">
+                <span className="card__title">{title}</span>
+            </div>
 
         </div>
 
