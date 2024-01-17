@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 function Carrousel(props){
 
@@ -43,13 +45,11 @@ function Carrousel(props){
 
         <div className="carrousel">
 
-            <button 
-            className="carrousel__button"
+            <FontAwesomeIcon 
+            icon={faChevronUp}
+            className="carrousel__buttonLeft"
             onClick={() => prevImage()}
-            >
-                Précédent
-
-            </button>
+            />
 
             <img 
             className="carrousel__image"
@@ -57,15 +57,13 @@ function Carrousel(props){
             alt="visuel de l'annonce"
             />
 
-            <span className="carrousel__value">{count + 1} / {arrayLength}</span>
+            <span className="carrousel__value">{count + 1}/{arrayLength}</span>
 
-            <button 
-            className="carrousel__button"
+            <FontAwesomeIcon 
+            icon={faChevronUp}
+            className="carrousel__buttonRight"
             onClick={() => nextImage()}
-            >
-                Suivant
-
-            </button>
+            />
 
         </div>
 
