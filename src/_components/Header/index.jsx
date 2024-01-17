@@ -6,7 +6,7 @@ function Header(){
     let activeLinkStyle = ({isActive}) => {
 
         return {
-            "border-bottom": isActive && "2px solid #FF6060",
+            "borderBottom": isActive && "2px solid #FF6060",
         };
     };
 

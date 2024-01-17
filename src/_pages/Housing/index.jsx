@@ -1,5 +1,6 @@
 import { useParams,useNavigate } from "react-router-dom";
 import { dataById } from "../../data/dataTools";
+import CardHousing from "../../_components/CardHousing";
 
 function Housing(){
 
@@ -14,11 +15,14 @@ function Housing(){
     } else {
 
         let data = dataById(id);
-        console.log(data);
 
         return(
+            
+            <>
 
-            <p>{data.title}</p>
+                <CardHousing data={data}/>
+
+            </>
             
         )
     

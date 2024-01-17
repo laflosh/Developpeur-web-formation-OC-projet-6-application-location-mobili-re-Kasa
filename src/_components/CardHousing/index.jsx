@@ -1,8 +1,18 @@
+import Carrousel from "../Carrousel";
 
+function CardHousing(props){
 
-function CardHousing(){
+    let data = props.data;
 
+    return(
 
+        <section className="cardHousing">
+
+            <Carrousel picture={data.pictures}/>
+
+        </section>
+
+    )
 
 }
 
