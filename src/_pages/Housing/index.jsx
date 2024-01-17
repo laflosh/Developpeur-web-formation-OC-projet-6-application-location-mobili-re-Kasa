@@ -1,19 +1,28 @@
-import { useLocation } from "react-router-dom";
+import { useParams,useNavigate } from "react-router-dom";
+import { dataById } from "../../data/dataTools";
 
 function Housing(){
 
+    let { id } = useParams();
+    console.log(id)
+    let navigate= useNavigate();
 
-    //récupération de l'id
-    //si id ={] => 404
+    if( id === undefined || ""){
 
-    let { state } = useLocation();
-    console.log(state);
+        navigate("*")
 
-    return(
+    } else {
 
-        <p>{state.title}</p>
-        
-    )
+        let data = dataById(id);
+        console.log(data);
+
+        return(
+
+            <p>{data.title}</p>
+            
+        )
+    
+    }
 
 }
 

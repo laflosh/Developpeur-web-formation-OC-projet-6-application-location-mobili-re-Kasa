@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from 'react-router-dom'
-import { dataGalery,dataById } from "../../data/dataTools";
+import { dataGalery } from "../../data/dataTools";
 import CardGalery from "../CardGalery";
 
 function Galery(){
@@ -15,17 +15,13 @@ function Galery(){
         setIdValue(idValue = id);
         console.log(idValue);
 
-        redirectionHousingPage();
+        redirectionHousingPage(idValue);
         
     };
 
-    function redirectionHousingPage(){
-        if(idValue === ""){
-            return
-        } else {
-            let dataHousingPage = dataById(idValue);
-            navigate("/housing", {state : dataHousingPage });
-        }
+    function redirectionHousingPage(id){
+
+        navigate(`/housing/${id}`);
         
     }
 
