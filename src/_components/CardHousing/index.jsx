@@ -11,8 +11,6 @@ function CardHousing(props){
     let tags = data.tags
     let host = data.host
 
-    console.log(data)
-
     return(
 
         <section className="cardHousing">
@@ -20,7 +18,7 @@ function CardHousing(props){
             <Carrousel pictures={data.pictures}/>
 
             <div className="countainerMain">
-                
+
                 <div className="countainerFirst">
 
                     <div className="cardHousing__title">

@@ -1,32 +1,25 @@
-import { useParams,useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { dataById } from "../../data/dataTools";
 import CardHousing from "../../_components/CardHousing";
 
 function Housing(){
 
+    let navigate = useNavigate();
     let { id } = useParams();
-    console.log(id)
-    let navigate= useNavigate();
+    let data = dataById(id);
 
-    if( id === undefined || ""){
+    let hasData = data != null && data !== undefined;
 
-        navigate("*")
+    useEffect(() => {
 
-    } else {
+        if(!hasData){
+            navigate("not-found");
+        }
 
-        let data = dataById(id);
+    });
 
-        return(
-            
-            <>
-
-                <CardHousing data={data}/>
-
-            </>
-            
-        )
-    
-    }
+    return hasData && <CardHousing data={data}/>;
 
 }
 
