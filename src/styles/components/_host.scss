@@ -1,0 +1,19 @@
+.host{
+    max-width: 150px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin: 10px;
+    &__name{
+        width: 90px;
+        text-align: right;
+        font-weight: 500;
+        font-size: 18px;
+    }
+    &__pic{
+        width: 64px;
+        height: 64px;
+        border-radius: 45px;
+        object-fit: cover;
+    }
+}

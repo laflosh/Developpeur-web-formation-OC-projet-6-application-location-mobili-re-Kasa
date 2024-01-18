@@ -5,4 +5,14 @@
         flex-direction: row;
         gap: 10px;
     }
+    &__collapse{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        gap: 10px;
+        &--size{
+            width: 45%;
+        }
+    }
 }

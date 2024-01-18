@@ -1,19 +1,26 @@
 import Carrousel from "../Carrousel";
+import Host from "../Host";
 import Tag from "../Tag";
+import Collapsable from "../Collapsable";
 
 function CardHousing(props){
 
     let data = props.data;
     let tags = data.tags
+    let host = data.host
 
     console.log(data)
-    console.log(tags)
 
     return(
 
         <section className="cardHousing">
 
             <Carrousel picture={data.pictures}/>
+
+            <Host
+            name={host.name}
+            picture={host.picture}
+            />
 
             <ul className="cardHousing__tag">
 
@@ -27,6 +34,24 @@ function CardHousing(props){
                 )}
 
             </ul>
+
+            <div className="cardHousing__collapse">
+
+                <div className="cardHousing__collapse--size">
+                    <Collapsable
+                    title={"Description"}
+                    content={data.description}
+                    />
+                </div>
+
+                <div className="cardHousing__collapse--size">
+                    <Collapsable
+                    title={"Equipements"}
+                    content={data.equipments}
+                    />
+                </div>
+
+            </div>
 
         </section>
 
