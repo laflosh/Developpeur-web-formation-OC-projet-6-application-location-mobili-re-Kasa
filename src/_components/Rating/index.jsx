@@ -6,7 +6,7 @@ function Rating(props){
     let note = props.rating;
     let rates = [];
 
-    for(let i = 0; i < 5;i++){
+    for(let i = 0; i < props.nbStar;i++){
 
         rates.push(
 
@@ -17,7 +17,7 @@ function Rating(props){
             />
 
         )
-        
+
     }
 
     return(

@@ -19,44 +19,58 @@ function CardHousing(props){
 
             <Carrousel pictures={data.pictures}/>
 
-            <div className="cardHousing__title">
+            <div className="countainerMain">
+                
+                <div className="countainerFirst">
 
-                <Title
-                title={data.title}
-                location={data.location}
-                />
+                    <div className="cardHousing__title">
+
+                        <Title
+                        title={data.title}
+                        location={data.location}
+                        />
+
+                    </div>
+
+                    <ul className="cardHousing__tag">
+
+                        {tags.map((tag,index) =>
+
+                            <Tag
+                            key={index}
+                            tag={tag}
+                            />
+
+                        )}
+
+                    </ul>
+
+                </div>
+
+                
+                <div className="countainerSecond">
+
+                    <div className="cardHousing__host">
+
+                        <Host
+                        name={host.name}
+                        picture={host.picture}
+                        />
+
+                    </div>
+
+                    <div className="cardHousing__rating">
+
+                        <Rating
+                        rating={data.rating}
+                        nbStar={5}
+                        />
+
+                    </div>
+
+                </div>
 
             </div>
-
-            <div className="cardHousing__host">
-
-                <Host
-                name={host.name}
-                picture={host.picture}
-                />
-
-            </div>
-
-            <div className="cardHousing__rating">
-
-                <Rating
-                rating={data.rating}
-                />
-
-            </div>
-
-            <ul className="cardHousing__tag">
-
-                {tags.map((tag,index) =>
-
-                    <Tag
-                    key={index}
-                    tag={tag}
-                    />
-
-                )}
-
-            </ul>
 
             <div className="cardHousing__collapse">
 
