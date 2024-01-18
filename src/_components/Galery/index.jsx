@@ -13,7 +13,6 @@ function Galery(){
     function handleClick(id){
 
         setIdValue(idValue = id);
-        console.log(idValue);
 
         redirectionHousingPage(idValue);
         

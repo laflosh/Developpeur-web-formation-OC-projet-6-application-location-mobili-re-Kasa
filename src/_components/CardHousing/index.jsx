@@ -1,6 +1,7 @@
 import Carrousel from "../Carrousel";
 import Title from "../Title";
 import Host from "../Host";
+import Rating from "../Rating";
 import Tag from "../Tag";
 import Collapsable from "../Collapsable";
 
@@ -16,7 +17,7 @@ function CardHousing(props){
 
         <section className="cardHousing">
 
-            <Carrousel picture={data.pictures}/>
+            <Carrousel pictures={data.pictures}/>
 
             <div className="cardHousing__title">
 
@@ -27,10 +28,22 @@ function CardHousing(props){
 
             </div>
 
-            <Host
-            name={host.name}
-            picture={host.picture}
-            />
+            <div className="cardHousing__host">
+
+                <Host
+                name={host.name}
+                picture={host.picture}
+                />
+
+            </div>
+
+            <div className="cardHousing__rating">
+
+                <Rating
+                rating={data.rating}
+                />
+
+            </div>
 
             <ul className="cardHousing__tag">
 
