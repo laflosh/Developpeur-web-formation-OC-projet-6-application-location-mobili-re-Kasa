@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
 
-    .title{
+    &__title{
         background-color: $cd-primary;
         display: flex;
         justify-content: space-between;
@@ -27,20 +27,20 @@
             transform: rotate(0deg);
             transition: transform 250ms linear;
 
-            &-over{
+            &--over{
                 transform: rotate(-180deg);
             }
         }
     }
 
-    .content {
+    &__content {
         text-align: start;
 
         max-height: 0px;
         overflow: hidden;
         transition: max-height 2s ease-out;
 
-        &-over{
+        &--over{
             max-height: 100%;
 
             div {

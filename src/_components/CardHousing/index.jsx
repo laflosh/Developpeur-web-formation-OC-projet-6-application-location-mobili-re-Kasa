@@ -1,4 +1,5 @@
 import Carrousel from "../Carrousel";
+import Title from "../Title";
 import Host from "../Host";
 import Tag from "../Tag";
 import Collapsable from "../Collapsable";
@@ -16,6 +17,15 @@ function CardHousing(props){
         <section className="cardHousing">
 
             <Carrousel picture={data.pictures}/>
+
+            <div className="cardHousing__title">
+
+                <Title
+                title={data.title}
+                location={data.location}
+                />
+
+            </div>
 
             <Host
             name={host.name}

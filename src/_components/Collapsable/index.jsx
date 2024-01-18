@@ -14,12 +14,12 @@ function Collapsable({title, content}){
 
         <div className="collapsable">
 
-            <div className="title" onClick={handleClick} >
+            <div className="collapsable__title" onClick={handleClick} >
                 <h2>{title}</h2>
-                <FontAwesomeIcon icon={faChevronUp} className={ "icon " + (isOpen ? "icon-over" : "") } />
+                <FontAwesomeIcon icon={faChevronUp} className={ "icon " + (isOpen ? "icon--over" : "") } />
             </div>
 
-            <div className={"content " + (isOpen ? "content-over" : "")}>
+            <div className={"collapsable__content " + (isOpen ? "collapsable__content--over" : "")}>
                 <div>
                     {content}
                 </div>
