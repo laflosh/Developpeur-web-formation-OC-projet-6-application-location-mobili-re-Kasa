@@ -1,75 +1,68 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 function Carrousel(props){
 
-    let arrayLength = props.picture.length;
+    let pictures = props.pictures;
+    let hasImages = pictures.length > 1;
     let [count, setCount] = useState(0);
-    let imageShow = props.picture;
-
+    
     function prevImage(){
-        if (count < 0) {
-            setCount(count = arrayLength - 1)
+
+        if (count <= 0) {
+            count = pictures.length -1;
         } else {
-            setCount(count--);
+            count--;
         }
+
+        setCount(count);
     }
 
     function nextImage(){
-        if (count === arrayLength) {
-            setCount(count = 0);
+
+        if (count === pictures.length -1) {
+            count = 0;
         } else {
-            setCount(count++);
+            count++;
         }
+        
+        setCount(count);
     }
-
-    if (arrayLength === 1){
-
-        return(
-
-            <div className="carrousel">
-
-            <img 
-            className="carrousel__image"
-            src={imageShow[count]} 
-            alt="visuel de l'annonce"
-            />
-
-            </div>
-
-        )
-    } else {
-
-        return (
+    
+    return (
 
         <div className="carrousel">
 
-            <FontAwesomeIcon 
-            icon={faChevronUp}
-            className="carrousel__buttonLeft"
-            onClick={() => prevImage()}
-            />
+            { hasImages && 
+ 
+                <FontAwesomeIcon 
+                    icon={faChevronUp}
+                    className="carrousel__buttonLeft"
+                    onClick={() => prevImage()}
+                />
+
+            }
 
             <img 
-            className="carrousel__image"
-            src={imageShow[count]} 
-            alt="visuel de l'annonce"
+                className="carrousel__image"
+                src={pictures[count]} 
+                alt="visuel de l'annonce"
             />
 
-            <span className="carrousel__value">{count + 1}/{arrayLength}</span>
+            { hasImages &&  <span className="carrousel__value">{count + 1} / {pictures.length}</span> }
 
-            <FontAwesomeIcon 
-            icon={faChevronUp}
-            className="carrousel__buttonRight"
-            onClick={() => nextImage()}
-            />
+            { hasImages && 
+                <FontAwesomeIcon 
+                    icon={faChevronUp}
+                    className="carrousel__buttonRight"
+                    onClick={() => nextImage()}
+                />
+            }
 
         </div>
 
-        )
-
-    }
+    )
 
 }
 
