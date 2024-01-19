@@ -14,7 +14,7 @@ function Collapsable({title, content}){
 
             <div className="collapsable__title" onClick={handleClick} >
                 <h2>{title}</h2>
-                <i className={ "fa fa-chevron-up icon" + (isOpen ? "--over" : "") }></i>
+                <i className={ "fa fa-chevron-up icon " + (isOpen ? "icon--over" : "") }></i>
             </div>
 
             <div className={"collapsable__content " + (isOpen ? "collapsable__content--over" : "")}>
