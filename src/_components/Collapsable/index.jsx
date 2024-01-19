@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 function Collapsable({title, content}){
 
@@ -16,7 +14,7 @@ function Collapsable({title, content}){
 
             <div className="collapsable__title" onClick={handleClick} >
                 <h2>{title}</h2>
-                <FontAwesomeIcon icon={faChevronUp} className={ "icon " + (isOpen ? "icon--over" : "") } />
+                <i className={ "fa fa-chevron-up icon" + (isOpen ? "--over" : "") }></i>
             </div>
 
             <div className={"collapsable__content " + (isOpen ? "collapsable__content--over" : "")}>

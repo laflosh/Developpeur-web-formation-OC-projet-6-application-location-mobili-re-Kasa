@@ -1,5 +1,3 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
 
 function Rating(props){
 
@@ -10,11 +8,10 @@ function Rating(props){
 
         rates.push(
 
-            <FontAwesomeIcon 
+            <i 
             key={i}
-            icon={faStar}
-            className={rates.length < note ?"starRating" : "starRating-grey"}
-            />
+            className={"fa fa-star " + (rates.length < note ?"starRating" : "starRating-grey")}
+            ></i>
 
         )
 

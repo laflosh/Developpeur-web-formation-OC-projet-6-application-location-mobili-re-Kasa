@@ -1,20 +1,16 @@
 .starRating{
-    width: 36px;
-    height: 36px;
+    font-size: 36px;
     padding: 5px;
     @media (max-width: 768px) {
-        width: 18px;
-        height: 18px;
+        font-size: 18px;
     }
 }
 
 .starRating-grey{
-    width: 36px;
-    height: 36px;
+    font-size: 36px;
     padding: 5px;
     color: grey;
     @media (max-width: 768px) {
-        width: 18px;
-        height: 18px;
+        font-size: 18px;
     }
 }
