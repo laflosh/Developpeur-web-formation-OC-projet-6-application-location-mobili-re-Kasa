@@ -3,6 +3,9 @@
     text-align: right;
     font-weight: 500;
     font-size: 18px;
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
 }
 
 .pic{
@@ -10,4 +13,8 @@
     height: 64px;
     border-radius: 45px;
     object-fit: cover;
+    @media (max-width: 768px) {
+        width: 32px;
+        height: 32px;
+    }
 }

@@ -13,10 +13,17 @@
     &__logo{
         width: 210px;
         height: 68px;
+        @media (max-width: 768px) {
+            width: 145px;
+            height: 46px;
+        }
     }
     .navbar{
         display: flex;
         gap: 57px;
+        @media (max-width: 768px) {
+            gap: 26px;
+        }
         &__link{
             font-weight: 500;
             font-size: 24px;
@@ -24,6 +31,9 @@
             text-align: right;
             border-bottom: 2px solid white;
             padding: 5px;
+            @media (max-width: 768px){
+                font-size: 12px;
+            }
         }
     }
 }

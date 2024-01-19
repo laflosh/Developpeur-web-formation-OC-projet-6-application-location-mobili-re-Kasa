@@ -9,15 +9,22 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 1em 1em;
+        padding: 0.8em 0.8em;
         margin-top: 2em;
         border-radius: 0.3em;
         cursor: pointer;
+        @media (max-width: 768px) {
+            padding: 0.5em 0.5em;
+            margin-top: 1.3em;
+        }
 
         h2{
             color: #FFFFFF;
             font-weight: 500;
             font-size: 1.6em;
+            @media (max-width: 768px) {
+                font-size: 1em;
+            }
         }
 
         .icon{
@@ -26,6 +33,10 @@
             height: 2em;
             transform: rotate(0deg);
             transition: transform 250ms linear;
+            @media (max-width: 768px) {
+                width: 1.3em;
+                height: 1.3em;
+            }
 
             &--over{
                 transform: rotate(-180deg);
@@ -57,6 +68,9 @@
             position: relative;
             top: -100px;
             transition: top 750ms ease;
+            @media (max-width: 768px) {
+                font-size: 0.9em;
+            }
         }
     }
     
