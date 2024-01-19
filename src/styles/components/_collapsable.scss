@@ -49,7 +49,7 @@
 
         max-height: 0px;
         overflow: hidden;
-        transition: max-height 2s ease-out;
+        transition: max-height 250ms ease-in-out;
 
         &--over{
             max-height: 100%;
@@ -67,9 +67,10 @@
             font-size: 1.1em;
             position: relative;
             top: -100px;
-            transition: top 750ms ease;
+            transition: top 550ms ease;
             @media (max-width: 768px) {
                 font-size: 0.9em;
+                top: -200px;
             }
         }
     }
