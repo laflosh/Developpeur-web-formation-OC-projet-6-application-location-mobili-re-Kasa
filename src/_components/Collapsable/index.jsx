@@ -20,9 +20,23 @@ function Collapsable({title, content}){
             </div>
 
             <div className={"collapsable__content " + (isOpen ? "collapsable__content--over" : "")}>
+
+                {typeof content === "string" ? (
+
                 <div>
                     {content}
                 </div>
+                ) : (
+                    <ul>
+                        {content.map((content,index) =>
+
+                            <li key={index}>
+                                {content}
+                            </li>
+                        )}
+                    </ul>
+                )}  
+
             </div>
 
         </div>

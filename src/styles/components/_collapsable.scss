@@ -54,12 +54,12 @@
         &--over{
             max-height: 100%;
 
-            div {
+            div, ul {
                 top:0px !important;
             }
         }
 
-        div {
+        div, ul {
             background-color: #F6F6F6;
             border-radius: 0px 0px 0.3em 0.3em;
             padding: 17.5px;
