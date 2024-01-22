@@ -1,4 +1,4 @@
-import { NavLink, } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import logo from "../../assets/logo.svg";
 
 function Header(){
@@ -14,21 +14,21 @@ function Header(){
 
         <header className="header">
 
-            <img className="header__logo" src={logo} title="Logo" alt="Logo de Kasa"/>
+            <NavLink to="/">
+                <img className="header__logo" src={logo} title="Logo" alt="Logo de Kasa"/>
+            </NavLink>
 
             <nav className="navbar">
 
-                <NavLink 
-                className="navbar__link" 
-                to="/"
-                style={activeLinkStyle}
+                <NavLink to="/"
+                    className="navbar__link" 
+                    style={activeLinkStyle}
                 >
                     Accueil
                 </NavLink>
-                <NavLink 
-                className="navbar__link" 
-                to="/about"
-                style={activeLinkStyle}
+                <NavLink to="/about"
+                    className="navbar__link" 
+                    style={activeLinkStyle}
                 >
                     A propos
                 </NavLink>

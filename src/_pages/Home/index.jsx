@@ -1,9 +1,12 @@
 import backgroundPic from "../../assets/background_img_home.png"
 import Galery from "../../_components/Galery";
+import { useNavigate } from "react-router-dom";
+import { dataGalery } from "../../data/dataTools";
 
 function Home(){
 
-
+    const navigate = useNavigate();
+    const data = dataGalery();
 
     return(
 
@@ -16,7 +19,7 @@ function Home(){
 
             </section>
 
-            <Galery/>
+            <Galery data={data} onClickHandler = {(id) => navigate(`/housing/${id}`)}/>
 
         </div>
 

@@ -73,17 +73,23 @@ function CardHousing(props){
             <div className="cardHousing__collapse">
 
                 <div className="cardHousing__collapse--size">
-                    <Collapsable
-                    title={"Description"}
-                    content={data.description}
-                    />
+                    <Collapsable title="Description">
+                        <div>
+                            <p>{data.description}</p>
+                        </div>
+                    </Collapsable>
+                    
                 </div>
 
                 <div className="cardHousing__collapse--size">
-                    <Collapsable
-                    title={"Equipements"}
-                    content={data.equipments}
-                    />
+                    <Collapsable title="Equipements">
+                        <ul>
+                            {data.equipments.map((equipment, index) =>
+                                <li key={index}>{equipment}</li>
+                            )}
+                        </ul>
+                    </Collapsable>
+                    
                 </div>
 
             </div>

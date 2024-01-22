@@ -1,7 +1,8 @@
 import { useState } from "react";
 
-function Collapsable({title, content}){
+function Collapsable(props){
 
+    const title = props.title
     let [isOpen, setIsOpen] = useState(false);
 
     function handleClick(){
@@ -17,23 +18,10 @@ function Collapsable({title, content}){
                 <i className={ "fa fa-chevron-up icon " + (isOpen ? "icon--over" : "") }></i>
             </div>
 
-            <div className={"collapsable__content " + (isOpen ? "collapsable__content--over" : "")}>
+            <div 
+                className={"collapsable__content " + (isOpen ? "collapsable__content--over" : "")}>
 
-                {typeof content === "string" ? (
-
-                <div>
-                    {content}
-                </div>
-                ) : (
-                    <ul>
-                        {content.map((content,index) =>
-
-                            <li key={index}>
-                                {content}
-                            </li>
-                        )}
-                    </ul>
-                )}  
+                {props.children}
 
             </div>
 

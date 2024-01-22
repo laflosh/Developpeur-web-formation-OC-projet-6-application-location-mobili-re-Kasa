@@ -1,27 +1,11 @@
-import { useState } from "react";
-import { useNavigate } from 'react-router-dom'
-import { dataGalery } from "../../data/dataTools";
 import CardGalery from "../CardGalery";
 
-function Galery(){
-
-    let [idValue, setIdValue] = useState("");
-    let navigate = useNavigate();
-
-    let datas = dataGalery();
+function Galery(props){
 
     function handleClick(id){
-
-        setIdValue(idValue = id);
-
-        redirectionHousingPage(idValue);
-        
-    };
-
-    function redirectionHousingPage(id){
-
-        navigate(`/housing/${id}`);
-        
+        if(props.onClickHandler){
+            props.onClickHandler(id);
+        }
     }
 
     return(
@@ -31,11 +15,9 @@ function Galery(){
             <ul className="galery">
 
                 
-                {datas.map( (data) =>
+                {props.data.map( (data) =>
 
-                    <li key={data.id}
-                    onClick={() => handleClick(data.id)}
-                    >
+                    <li key={data.id} onClick={() => handleClick(data.id)}>
 
                         <CardGalery
                         title={data.title}
