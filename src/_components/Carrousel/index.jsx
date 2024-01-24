@@ -34,20 +34,24 @@ function Carrousel(props){
 
             <div className="btn">
 
-                { hasImages && 
-    
-                    <i 
-                        className="fa fa-chevron-up carrousel__buttonLeft"
-                        onClick={() => prevImage()}
-                    ></i>
+                { hasImages && (
+                    <>
+                        <i 
+                            className="fa fa-chevron-up carrousel__buttonLeft"
+                            onClick={() => prevImage()}
+                        ></i>
 
-                }
-
-                { hasImages && 
-                    <i 
+                        <i 
                         className="fa fa-chevron-up carrousel__buttonRight"
                         onClick={() => nextImage()}
-                    ></i>
+                        ></i>
+
+                        <span className="carrousel__value">{count + 1} / {pictures.length}</span>
+
+                    </>
+
+                    )               
+
                 }
 
             </div>
@@ -57,8 +61,6 @@ function Carrousel(props){
                 src={pictures[count]} 
                 alt="visuel de l'annonce"
             />
-
-            { hasImages &&  <span className="carrousel__value">{count + 1} / {pictures.length}</span> }
 
         </div>
 
